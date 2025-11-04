@@ -486,7 +486,7 @@ def save_to_specific_sheet(df_session: pd.DataFrame, sheet_id_or_url: str):
 # Done (Finish = write to provided Sheet)
 # ----------------------------
 if st.session_state.stage == "done":
-    st.success("All trials completed. Thank you! 🎉")
+    st.success("All trials completed. Before you leave, make sure click the Finish button below and check the Success message. 🎉")
 
     if st.session_state.condition == "with" and st.session_state.ai_helpfulness_overall is None:
         st.session_state.ai_helpfulness_overall = st.radio(
@@ -534,7 +534,7 @@ if st.session_state.stage == "done":
             status, obj, svc = save_to_specific_sheet(df, target_id)
             if status == "ok":
                 st.session_state.finished = True
-                st.success("✅ Data submitted successfully. Thank you for completing the study!")
+                st.success("✅ Successfully done. Thank you for completing the study!")
             elif status == "perm_err":
                 st.error("Permission denied when writing to the provided sheet.")
                 st.write("- **Share this spreadsheet with the service account email below as an *Editor*.**")
