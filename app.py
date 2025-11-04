@@ -273,10 +273,9 @@ if DEBUG:
 if st.session_state.stage == "setup":
     st.subheader("Participant Setup")
     pid = st.text_input(
-        "Enter your Participant ID (no PII)",
+        "Recommended: use your uniqname (e.g., jdoe01) or another short ID (no personal info).",
         value=st.session_state.participant_id,
         placeholder="e.g., uniqname01",
-        help="Recommended: use your uniqname (e.g., jdoe01) or another short ID (no personal info).",
     )
     st.session_state.participant_id = pid.strip()
 
