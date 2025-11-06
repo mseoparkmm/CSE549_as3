@@ -273,7 +273,7 @@ if DEBUG:
 if st.session_state.stage == "setup":
     st.subheader("Participant Setup")
     pid = st.text_input(
-        "Recommended: use your uniqname (e.g., jdoe01) or another short ID (no personal info).",
+        "Recommended: use your worker name or uniqname (e.g., jdoe01)(no personal info).",
         value=st.session_state.participant_id,
         placeholder="e.g., uniqname01",
     )
@@ -486,7 +486,7 @@ def save_to_specific_sheet(df_session: pd.DataFrame, sheet_id_or_url: str):
 # Done (Finish = write to provided Sheet)
 # ----------------------------
 if st.session_state.stage == "done":
-    st.success("All trials completed. Before you leave, make sure click the Finish button below and check the Success message. 🎉")
+    st.success("All trials completed. Before you leave, make sure click the Finish button below and check the Success message. Don't forget to Copy completion code below, return to Mturk and submit it. 🎉")
 
     if st.session_state.condition == "with" and st.session_state.ai_helpfulness_overall is None:
         st.session_state.ai_helpfulness_overall = st.radio(
