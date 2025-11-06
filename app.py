@@ -272,8 +272,9 @@ if DEBUG:
 # ----------------------------
 if st.session_state.stage == "setup":
     st.subheader("Participant Setup")
+    st.subheader("You will solve 5 problems by reading a passage and choosing one answer from four options, with or without AI assistance.")
     pid = st.text_input(
-        "Recommended: use your worker name or uniqname (e.g., jdoe01)(no personal info).",
+        "Recommended: use your MTurk worker ID or umich uniqname (e.g., mseopark).",
         value=st.session_state.participant_id,
         placeholder="e.g., uniqname01",
     )
