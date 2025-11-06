@@ -486,7 +486,7 @@ def save_to_specific_sheet(df_session: pd.DataFrame, sheet_id_or_url: str):
 # Done (Finish = write to provided Sheet)
 # ----------------------------
 if st.session_state.stage == "done":
-    st.success("All trials completed. Before you leave, make sure click the Finish button below and check the Success message. Don't forget to Copy completion code below, return to Mturk and submit it. 🎉")
+    st.success("All trials completed. Before you leave, 1) Don't forget to Copy completion code below, return to Mturk and submit it, and then 2) make sure click the Finish button below and check the Success message. 🎉")
 
     if st.session_state.condition == "with" and st.session_state.ai_helpfulness_overall is None:
         st.session_state.ai_helpfulness_overall = st.radio(
