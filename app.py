@@ -271,8 +271,9 @@ if DEBUG:
 # Setup
 # ----------------------------
 if st.session_state.stage == "setup":
-    st.subheader("Participant Setup")
     st.subheader("You will solve 5 problems by reading a passage and choosing one answer from four options, with or without AI assistance.")
+    st.subheader("For each of the 5 questions, please select your answer and indicate your confidence level (1 to 5).")
+    st.subheader("Participant Setup")
     pid = st.text_input(
         "Recommended: use your MTurk worker ID or umich uniqname (e.g., mseopark).",
         value=st.session_state.participant_id,
